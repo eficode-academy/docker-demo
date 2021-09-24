@@ -1,12 +1,8 @@
-# docker-demo
+# Docker Demos
 
-===
+---
 
-# Demos
-
-## Run some cool containers:
-
-### Hello world
+## Hello world
 
 Run the hello-world image to check that your docker installation works!
 
@@ -27,6 +23,10 @@ Show the file system of a container
 ```sh
 docker run alpine ls
 ```
+
+---
+
+## Run some cool containers:
 
 ### Run an interactive shell in a container
 
@@ -66,7 +66,7 @@ docker run -d -p 80:80 nginx
 
 Then access it on, e.g. `http://localhost` (make sure it is not trying to use https!)
 
-### Bind-mount the host file system in to a container
+### Bind-mount the host file system into a container
 
 Create a directory and some html:
 
