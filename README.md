@@ -36,12 +36,33 @@ Try some commands like `ls`, `whoami`, `cat /etc/os-release`
 docker run -it alpine
 ```
 
+### Containers are emphemeral, so lets try to delete the filesystem of a container!
+
+Run an interactive ubuntu container and delete the entire filesystem!
+
+**Be careful not to do this on your host machine!**
+
+```sh
+docker run -it ubuntu
+rm -rf / --no-preserve-root
+```
+
+Try some commands like `echo`, `ls`, `bash` do some of them work? why?
+
+Exit the container when you are done playing around.
+
+Then run a new ubuntu container, which will start form the same immutable docker image, meaning we can break as many containers as we want, because we always just create new ones!
+
+```sh
+docker run -it ubuntu
+```
+
 ### ping in a detached container
 
 Run a container that does something in the background
 
 ```sh
-docker run -d alpine ping -C 10 localhost
+docker run -d alpine ping -c 10 localhost
 ```
 
 View running containers with
