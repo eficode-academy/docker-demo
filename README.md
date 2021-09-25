@@ -125,13 +125,19 @@ docker run -d -p 8080:80 -v <path-to-your-my_html>/usr/share/nginx/html nginx
     ```
    
 
-4. Run container with Dockerfile.
+4. Build image with Dockerfile.
 
     ```shell
-    docker run -d nginx-DF -p 8080:80 .
+    docker build -t nginx-test:1.0  .
     ```
 
-5. Check what is displayed on `http://localhost:8080`
+5. Run docker image
+
+    ```shell
+    docker run -d -p 8080:80 nginx-test:1.0 
+    ```
+
+6. Check what is displayed on `http://localhost:8080`
 
 
 ## Docker-compose Nextcloud showcase
